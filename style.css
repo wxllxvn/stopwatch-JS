@@ -51,7 +51,7 @@ h1{
     color: var(--dark-yellow);
 }
 
-.timer-area p, .timer-area p span{
+.timer-area p{
     font-size: 10rem;
 }
 
