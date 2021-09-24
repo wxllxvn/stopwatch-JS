@@ -27,10 +27,14 @@ window.onload = function(){
 
     btnReset.addEventListener("click", function(){
         clearInterval(intervalo)
-        tens = "00";
-        seconds = "00";
-        appSeconds.innerHTML = seconds;
-        appTens.innerHTML = tens;
+        tens = 0;
+        seconds = 0;
+        markId = 0;
+        appSeconds.innerHTML = "00";
+        appTens.innerHTML = "00";
+        while (markUl.hasChildNodes){
+            markUl.removeChild(markUl.firstChild)
+        }
     })
 
 
@@ -53,12 +57,16 @@ window.onload = function(){
                 markText = document.createTextNode(seconds + ":" + tens);
             }
 
-            console.log("ola will")
+
         }else{
             if (tens <= 9){
                 markText = document.createTextNode("0" + seconds + ":" + "0" + tens);
+            }else if(tens == 0 && seconds ==0){
+                markText = document.createTextNode("00:00")
+
             } else{
                 markText = document.createTextNode("0" + seconds + ":" + tens);
+                console.log(seconds)
             }
             
         }

@@ -85,21 +85,39 @@ h1{
     justify-content: center;
 }
 
-.mark-list, .mark-list ul{
-    width: 50%;
+.marks{
     background-color: var(--dark-yellow);
+    width: 30%;
+    border-radius: 30px;
+    box-shadow:2px 0px 10px 2px black;
+    padding: 10px;
+}
+.marks h2{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.mark-list{
+    display: flex;
+    justify-content: center;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.mark-list ul{
+    width: 80%;
 }
 
 ul{
     font-size: 2.5rem;
-
 }
 
 ul div{
     width: 100%;
     display: flex;
     justify-content: space-between;
-
+    border-bottom: 1px solid black;
 }
 
 ul li{
